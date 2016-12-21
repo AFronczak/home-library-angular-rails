@@ -7,5 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Book.create!([
   { name: 'Copying and Pasting from Stack Overflow' },
-  { name: 'Trying Stuff Until it Works' }
+  { name: 'Trying Stuff Until it Works' },
+  { name: 'Books on Books on Books' },
   ])

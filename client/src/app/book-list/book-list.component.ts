@@ -1,5 +1,3 @@
-// src/app/book-list/book-list.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 
@@ -9,12 +7,13 @@ import { Http } from '@angular/http';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
+  books: any;
 
   constructor(private http: Http) { }
 
   ngOnInit() {
     this.http.get('/api/books.json')
-      .subscribe(response => console.log(response));
+      .subscribe(response => this.books = response.json());
   }
 
 }
